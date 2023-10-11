@@ -4,17 +4,19 @@ const { log } = require("console");
 var express = require("express");
 const app = express();
 
+app.set("view engine","ejs");
 app.use(express.static('./public'))
 app.get("/", (req, res) => {
-  res.sendFile("index.html", { root: __dirname });
+  res.render('index');
 });
+
 
 app.listen("3000", function () {
   console.log("server is started at 3000");
 });
 
 
-// if(typeof window === "object"){
+if(typeof window === "object"){
 
   function newgame() {
     var timer = 5;
@@ -70,5 +72,5 @@ app.listen("3000", function () {
     getNewHit();
   }
   newgame();
-// }
+ }
 
