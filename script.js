@@ -1,17 +1,17 @@
 
 
-// const { log } = require("console");
-// var express = require("express");
-// const app = express();
+const { log } = require("console");
+var express = require("express");
+const app = express();
 
-// app.use(express.static('./public'))
-// app.get("/", (req, res) => {
-//   res.sendFile("index.html", { root: __dirname });
-// });
+app.use(express.static('./public'))
+app.get("/", (req, res) => {
+  res.sendFile("index.html", { root: __dirname });
+});
 
-// app.listen("3000", function () {
-//   console.log("server is started at 3000");
-// });
+app.listen("3000", function () {
+  console.log("server is started at 3000");
+});
 
 
 // if(typeof window === "object"){
